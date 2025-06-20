@@ -1,0 +1,42 @@
+[
+  {
+    "code": "AZN",
+    "rate": 0.02166
+  },
+  {
+    "code": "BYR",
+    "rate": 0.037922
+  },
+  {
+    "code": "EUR",
+    "rate": 0.011131
+  },
+  {
+    "code": "GEL",
+    "rate": 0.034754
+  },
+  {
+    "code": "KGS",
+    "rate": 1.114241
+  },
+  {
+    "code": "KZT",
+    "rate": 6.61039
+  },
+  {
+    "code": "RUR",
+    "rate": 1.0
+  },
+  {
+    "code": "UAH",
+    "rate": 0.531132
+  },
+  {
+    "code": "USD",
+    "rate": 0.012741
+  },
+  {
+    "code": "UZS",
+    "rate": 160.779976
+  }
+]
