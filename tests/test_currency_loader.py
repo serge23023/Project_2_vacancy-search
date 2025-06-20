@@ -1,7 +1,7 @@
 import json
 import requests
 
-from src.api.currency_loader import fetch_and_save_currency_rates
+from src.utils.currency_loader import fetch_and_save_currency_rates
 
 
 def test_fetch_and_save_success(monkeypatch, tmp_path, capsys):
@@ -17,11 +17,11 @@ def test_fetch_and_save_success(monkeypatch, tmp_path, capsys):
         def raise_for_status(self): pass
         def json(self): return dummy_currency_data
 
-    monkeypatch.setattr("src.api.currency_loader.requests.get", lambda _: MockResponse())
+    monkeypatch.setattr("src.utils.currency_loader.requests.get", lambda _: MockResponse())
 
     fake_currency_file = tmp_path / "currencies.json"
-    monkeypatch.setattr("src.api.currency_loader.CURRENCY_FILE", str(fake_currency_file))
-    monkeypatch.setattr("src.api.currency_loader.os.makedirs", lambda *a, **kw: None)
+    monkeypatch.setattr("src.utils.currency_loader.CURRENCY_FILE", str(fake_currency_file))
+    monkeypatch.setattr("src.utils.currency_loader.os.makedirs", lambda *a, **kw: None)
 
     fetch_and_save_currency_rates()
 
@@ -41,7 +41,7 @@ def test_fetch_and_save_failure(monkeypatch, capsys):
     def fail_get(url):
         raise requests.RequestException("boom")
 
-    monkeypatch.setattr("src.api.currency_loader.requests.get", fail_get)
+    monkeypatch.setattr("src.utils.currency_loader.requests.get", fail_get)
 
     fetch_and_save_currency_rates()
     out = capsys.readouterr().out

@@ -1,15 +1,14 @@
 [tool.poetry]
-name = "Проект 2. Поиск вакансийй"
+name = "vacancy-search"
 version = "0.1.0"
-description = ""
+description = "Консольное приложение для поиска и фильтрации вакансий через API hh.ru"
 authors = ["Den <serge23023@gmail.com>"]
 readme = "README.md"
-packages = [{include = "13"}]
+packages = [{ include = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-pytest-cov = "^6.2.1"
-
+requests = "^2.31.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.1.1"

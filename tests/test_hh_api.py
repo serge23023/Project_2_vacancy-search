@@ -6,7 +6,7 @@ def test_get_vacancies_success(monkeypatch):
     def mock_get(url, params):
         assert url == HeadHunterAPI.BASE_URL
         assert params["text"] == "Python"
-        assert params["per_page"] == 30
+        assert params["per_page"] == 20
         assert params["experience"] == "between1And3"
         assert params["salary"] == 150000
         assert params["only_with_salary"] == "True"
