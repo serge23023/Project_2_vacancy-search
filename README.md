@@ -1,8 +1,5 @@
 # 🧠 Проект: Поиск вакансий с hh.ru
 
-![Тесты](https://github.com/serge23023/Project_2_vacancy-search/actions/workflows/tests.yml/badge.svg)
-[![codecov](https://codecov.io/gh/serge23023/Project_2_vacancy-search/branch/main/graph/badge.svg)](https://codecov.io/gh/serge23023/Project_2_vacancy-search)
-
 Интеграция с HeadHunter API: поиск, фильтрация, сохранение и удаление вакансий.  
 Консольное приложение, реализованное с применением ООП, SOLID и покрытое тестами.
 
